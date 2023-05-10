@@ -55,7 +55,20 @@ export const boardSlice = createSlice({
       }
     },
     reset(state) {
-      state.board = state.board.map((card) => ({ ...card, visible: false }));
+      const [visibleCardId1, visibleCardId2] = state.board
+        .filter((card) => card.visible)
+        .map((card) => card.id);
+
+      if (visibleCardId2 !== undefined) {
+        state.board[visibleCardId1] = {
+          ...state.board[visibleCardId1],
+          visible: false,
+        };
+        state.board[visibleCardId2] = {
+          ...state.board[visibleCardId2],
+          visible: false,
+        };
+      }
     },
   },
 });

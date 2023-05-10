@@ -30,11 +30,11 @@ const Card = ({ id, contents }) => {
     click = () => {};
   }
 
-  if (visibleIDs.length === 2) {
-    setTimeout(() => {
+  if (visibleIDs.length > 1) {
+    click = () => {
       dispatch(reset());
-    }, 800);
-    click = () => {};
+      dispatch(flipCard(id));
+    };
   }
 
   let cardStyle;
