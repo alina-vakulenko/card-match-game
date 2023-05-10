@@ -19,7 +19,7 @@ const Card = ({ id, contents }) => {
 
   let cardContent = (
     <img
-      src={`${process.env.PUBLIC_URL}/assets/card.png`}
+      src={process.env.PUBLIC_URL + "/assets/card.png"}
       className="logo-placeholder"
       alt="Card option"
     />
