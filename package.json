@@ -21,7 +21,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://alina-vakulenko.github.io/card-match-game",
   "eslintConfig": {
     "extends": [
       "react-app",

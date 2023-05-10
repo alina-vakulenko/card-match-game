@@ -7,8 +7,6 @@ import {
   reset,
 } from "../../features/board/boardSlice";
 
-const cardLogo = "/assets/card.png";
-
 const Card = ({ id, contents }) => {
   const dispatch = useDispatch();
   const visibleIDs = useSelector(selectVisibleIDs);
@@ -20,7 +18,7 @@ const Card = ({ id, contents }) => {
   let click = () => dispatch(flipCard(id));
 
   let cardContent = (
-    <img src={cardLogo} className="logo-placeholder" alt="Card option" />
+    <img src={"./assets/card.png"} className="logo-placeholder" alt="Card option" />
   );
 
   if (isCardVisibleOrMatched) {
